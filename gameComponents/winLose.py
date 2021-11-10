@@ -1,3 +1,5 @@
+from gameComponents import gameVars
+
 def winorlose(status):
 	print(" ")
 	print("DAD " + status)
@@ -13,10 +15,10 @@ def winorlose(status):
 		print("Ok Dad, you must have a lot better things to do ... continue with your busy adult life  :(")
 		print(" ")
 		exit()
-	else:
+	elif choice == "y":
 		print(" ")
 		print("Remember... Wall defeats Gun, Gun defeats Rabbit, and Rabbit defeats Wall.")
 		print(" ")
-		DadLives = 1
-		SonLives = 1
-		Dad = False
+		gameVars.DadLives = 1
+		gameVars.SonLives = 1
+		gameVars.Dad = False

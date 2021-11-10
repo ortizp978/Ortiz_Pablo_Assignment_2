@@ -1,9 +1,9 @@
 from random import randint
-from gameComponents import winLose
+from gameComponents import winLose,gameVars
 
 choices = ["rabbit", "gun", "wall"]
 
-Dad= False
+Dad = False
 
 # add player 
 DadLives = 1
@@ -18,65 +18,65 @@ print("WALL defeats GUN, GUN defeats RABBIT, and RABBIT defeats WALL.")
 print("Good Luck Daddy!")
 print(" ")
 
-while Dad is False:
+while gameVars.Dad is False:
 
 
-	Dad =input("Make your selection! :")
-	Son = choices[randint(0,2)]
+	gameVars.Dad =input("Make your selection! :")
+	gameVars.Son = choices[randint(0,2)]
 
-	print("Dad chose: " + Dad)
-	print("Son chose: " + Son)
+	print("Dad chose: " + gameVars.Dad)
+	print("Son chose: " + gameVars.Son)
 
 	#=====================================
 
-	if (Son == Dad):
+	if (gameVars.Son == gameVars.Dad):
 		print(" ")
 		print("You select the same! Choose again")
 
-	elif (Dad == "rabbit"):
-		if (Son == "gun"):
+	elif (gameVars.Dad == "rabbit"):
+		if (gameVars.Son == "gun"):
 			print(" ")
 			print("Dad lose!")
-			DadLives = DadLives - 1
+			gameVars.DadLives = gameVars.DadLives - 1
 		else:
 			print(" ")
 			print("DAD WIN!")
-			SonLives = SonLives - 1
+			gameVars.SonLives = gameVars.SonLives - 1
 
-	elif (Dad == "gun"):
-		if (Son == "wall"):
+	elif (gameVars.Dad == "gun"):
+		if (gameVars.Son == "wall"):
 			print(" ")
 			print("Dad lose!")
-			DadLives = DadLives - 1
+			gameVars.DadLives = gameVars.DadLives - 1
 		else:
 			print(" ")
 			print("DAD WIN!")
-			SonLives = SonLives - 1
+			gameVars.SonLives = gameVars.SonLives - 1
 
-	elif (Dad == "wall"):
-		if (Son == "rabbit"):
+	elif (gameVars.Dad == "wall"):
+		if (gameVars.Son == "rabbit"):
 			print(" ")
 			print("Dad lose!")
-			DadLives = SonLives - 1
+			gameVars.DadLives = gameVars.SonLives - 1
 		else:
 			print(" ")
 			print("DAD WIN!")
-			SonLives = SonLives - 1
+			gameVars.SonLives = gameVars.SonLives - 1
 
 	print("==============")
-	print("Dad Lives " + str(DadLives))
-	print("Son Lives: " + str(SonLives))
+	print("Dad Lives " + str(gameVars.DadLives))
+	print("Son Lives: " + str(gameVars.SonLives))
 	print("==============")
 	print(" ")
 
 	#=====================================
 
-	if DadLives == 0:
+	if gameVars.DadLives == 0:
 		# call the winorlose function here
 		winLose.winorlose(" lost :( ")
 
-	elif SonLives == 0:
+	elif gameVars.SonLives == 0:
 		# call the winorlose function here
 		winLose.winorlose(" WON!! :) :) :) :) ")
 
-	Dad = False
+	gameVars.Dad = False
