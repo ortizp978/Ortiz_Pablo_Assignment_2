@@ -6,8 +6,8 @@ choices = ["rabbit", "gun", "wall"]
 Dad= False
 
 # add player 
-DadLives = 5
-SonLives = 5
+DadLives = 1
+SonLives = 1
 
 print(" ")
 print("LETS PLAY WITH YOUR SON RABBIT - GUN - WALL!")
