@@ -5,5 +5,5 @@ choices = ["rabbit", "gun", "wall"]
 Dad = False
 
 # these lives need to decrement when a player loses a round
-DadLives = 2
-SonLives = 2
+DadLives = 5
+SonLives = 5

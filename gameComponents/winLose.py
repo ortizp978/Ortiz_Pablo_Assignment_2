@@ -19,6 +19,6 @@ def winorlose(status):
 		print(" ")
 		print("Remember... Wall defeats Gun, Gun defeats Rabbit, and Rabbit defeats Wall.")
 		print(" ")
-		gameVars.DadLives = 1
-		gameVars.SonLives = 1
+		gameVars.DadLives = 5
+		gameVars.SonLives = 5
 		gameVars.Dad = False
